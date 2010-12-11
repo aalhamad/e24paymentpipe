@@ -15,10 +15,10 @@ Jeweler::Tasks.new do |gem|
   gem.name = "e24paymentpipe"
   gem.homepage = "http://github.com/aalhamad/e24paymentpipe"
   gem.license = "MIT"
-  gem.summary = %Q{TODO: A ruby implementation of E24PaymentPipe}
-  gem.description = %Q{ TODO: A ruby implementation of E24PaymentPipe of italian 
-                        bank Intesa San Paolo. It allows to connect to online credit 
-                        card payment from http://www.aciworldwide.com/}
+  gem.summary = %Q{A ruby implementation of E24PaymentPipe}
+  gem.description = %Q{A ruby implementation of E24PaymentPipe of italian bank 
+                       Intesa San Paolo. It allows to connect to online credit 
+                       card payment from http://www.aciworldwide.com/ }
   gem.email = "ab.alhamad@gmail.com"
   gem.authors = ["Abdullah AL Hamad"]
   # Include your dependencies below. Runtime dependencies are required when using your gem,

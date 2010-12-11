@@ -1,6 +1,8 @@
 = e24paymentpipe
 
-Description goes here.
+A ruby implementation of E24PaymentPipe of italian bank Intesa San Paolo. It allows to connect to online credit card payment from http://www.aciworldwide.com/.
+
+The project is in it initial development process.
 
 == Contributing to e24paymentpipe
  
