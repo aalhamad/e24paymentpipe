@@ -9,3 +9,4 @@ DS_Store
 tmtags
 Gemfile.lock
 .rspec
+.document
