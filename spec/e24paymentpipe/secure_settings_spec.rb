@@ -2,7 +2,7 @@ require File.expand_path(File.dirname(__FILE__) + '/../spec_helper')
 
 describe "SecureSettings" do
   before(:each) do 
-    @secure_settings = E24PaymentPipe::SecureSettings.new
+    @secure_settings = E24PaymentPipe::SecureSettings.new(:alias => "alias")
   end
   
   context "file and directory" do
