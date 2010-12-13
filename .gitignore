@@ -7,6 +7,6 @@ pkg
 DS_Store
 *.tmproj
 tmtags
-Gemfile.lock
 .rspec
 .document
+data
