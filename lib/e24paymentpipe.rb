@@ -3,5 +3,6 @@ require "bundler/setup"
 
 $LOAD_PATH.unshift(File.dirname(__FILE__) + '/e24paymentpipe')
 require "errors"
-require 'payment'
-require 'secure_settings'
+require "secure_settings"
+require "parser"
+require "url"

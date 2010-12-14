@@ -7,8 +7,8 @@ When /^perform a initialization with Knet$/ do
 end
 
 Then /^Knet replies with transaction unique ID and Knet payment url$/ do
-  payment_id  = @payment.params[:id]
-  payment_url = @payment.params[:url]
+  payment_id  = @payment.id
+  payment_url = @payment.url
   
   payment_id.should be_true
   payment_url.should be_true 
