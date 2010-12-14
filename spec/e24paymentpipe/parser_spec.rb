@@ -1,7 +1,7 @@
 require File.expand_path(File.dirname(__FILE__) + '/../spec_helper')
 
 describe "Parser" do
-  context "context" do
+  context "secure settings" do
     before(:each) do
       @secure_data = "<?xml version=\"1.0\" encoding=\"UTF-8\"?><terminal><id>89001</id>
                     <password>89001</password><webaddress>www.knetpaytest.com.kw</webaddress>

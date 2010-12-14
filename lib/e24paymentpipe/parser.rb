@@ -19,7 +19,7 @@ module E24PaymentPipe
       results = {}
       doc = REXML::Document.new(data).root
       results[:id ]         = doc.elements["id"].text
-      results[:id]          = doc.elements["password"].text
+      results[:password]    = doc.elements["password"].text
       results[:web_address] = doc.elements["webaddress"].text
       results[:port]        = doc.elements["port"].text
       results[:context]     = doc.elements["context"].text

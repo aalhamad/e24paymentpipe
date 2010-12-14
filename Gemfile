@@ -1,6 +1,7 @@
 source "http://rubygems.org"
 
 gem "rubyzip", ">= 0.9.4"
+gem "httparty", ">= 0.6.1"
 
 group :development do
   gem "rspec", ">= 2.1.0"
