@@ -26,6 +26,24 @@ module E24PaymentPipe
       result
     end
     
+    def self.create_transaction_query(messages)
+      result = ""
+      result << "id=#{messages[:id]}&" unless messages[:id].empty? 
+      result << "password=#{messages[:password]}&" unless messages[:password].empty?
+      result << "amt=#{messages[:amt]}&" unless messages[:amt].empty?
+      result << "currencycode=#{messages[:currency_code]}&" unless messages[:currency_code].empty?
+      result << "action=#{messages[:action]}&" unless messages[:action].empty?
+      result << "paymentid=#{messages[:payment_id]}&" unless messages[:payment_id].empty?
+      result << "transid=#{messages[:trans_id]}&" unless messages[:trans_id].empty? 
+      result << "trackid=#{messages[:track_id]}&" unless messages[:track_id].empty? 
+      result << "udf1=#{messages[:udf1]}&" unless messages[:udf1].empty? 
+      result << "udf2=#{messages[:udf2]}&" unless messages[:udf2].empty?
+      result << "udf3=#{messages[:udf3]}&" unless messages[:udf3].empty?
+      result << "udf4=#{messages[:udf4]}&" unless messages[:udf4].empty?
+      result << "udf5=#{messages[:udf5]}&" unless messages[:udf5].empty?
+      result
+    end
+    
     def self.create_message_url(settings, send_to)
       from = ""
       raise E24PaymentPipe::UrlError, "No Url specified" if settings[:web_address].empty?

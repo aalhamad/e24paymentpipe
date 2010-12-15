@@ -7,4 +7,6 @@ require "secure_settings"
 require "parser"
 require "url"
 require "message"
+require "payment"
 require 'transaction'
+

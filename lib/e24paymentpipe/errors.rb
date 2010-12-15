@@ -3,5 +3,6 @@ module E24PaymentPipe
   class ParserError < StandardError;  end
   class MessageError < StandardError;  end
   class UrlError < StandardError;  end
-  class TransactionError < StandardError;  end  
+  class TransactionError < StandardError;  end
+  class PaymentError < StandardError;  end
 end

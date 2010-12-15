@@ -12,23 +12,20 @@ module E24PaymentPipe
   # You need to set an alias, if not, an errors is going to be raised.
   
   class SecureSettings   
-    DEFAULT_PATH = ""
-    DEFAULT_INPUT_NAME = "resource.cgn"
-    DEFAULT_OUTPUT_NAME = "resource.cgz"
-    
+        
     # Open resource file and create a readable one. Error thrown if no resource
     # file is found or alias options is not set.
     #
     # Options:
     #
-    # - <tt>:resource_path</tt>    - Set the directory of the resource path. DEFAULT: current directory
-    # - <tt>:input_file_name</tt>  - Set the input file name. DEFAULT: "resource.cgn"
-    # - <tt>:output_file_name</tt> - Set the output file name. DEFAULT: "resource.cgz"
+    # - <tt>:resource_path</tt>    - Set the directory of the resource path.
+    # - <tt>:input_file_name</tt>  - Set the input file name.
+    # - <tt>:output_file_name</tt> - Set the output file name.
     
     def initialize(options = {})
-      @resource_path    = options[:resource_path]    || DEFAULT_PATH
-      @input_file_name = options[:input_file_name] || DEFAULT_INPUT_NAME 
-      @output_file_name = options[:output_file_name] || DEFAULT_OUTPUT_NAME
+      @resource_path    = options[:resource_path] 
+      @input_file_name  = options[:input_file_name]
+      @output_file_name = options[:output_file_name] 
       @alias            = options[:alias]
       
       raise E24PaymentPipe::SecureSettingsError, "You need to set an alias" unless @alias
@@ -42,7 +39,7 @@ module E24PaymentPipe
       @resource_path + @input_file_name
     end
     
-    # Return the output readable zip file from the secure setting file "resource.cgn"
+    # Return the output readable zip file from the secure setting file
     # with directory.
     def output_file_name
       @resource_path + @output_file_name
@@ -50,7 +47,7 @@ module E24PaymentPipe
     
     # Return the secure settings data.
     def secure_data
-      read_zip
+      E24PaymentPipe::Parser.parse_settings(read_zip)
     end
     
     private
