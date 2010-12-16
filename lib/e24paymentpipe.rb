@@ -9,4 +9,3 @@ require "url"
 require "message"
 require "payment"
 require 'transaction'
-

@@ -16,6 +16,7 @@ module E24PaymentPipe
                     :resource_path    => "",
                     :input_file_name  => "resource.cgn",
                     :output_file_name => "resource.cgz",
+                    :alias            => "",
                     :udf1             => "",
                     :udf2             => "",
                     :udf3             => "",

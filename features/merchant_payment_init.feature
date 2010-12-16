@@ -9,8 +9,8 @@ Feature: Merchant payment initialization
 	  Then gateway replies with transaction unique ID and gateway payment url
 
 	Scenarios: 
-	  | action | amt | currency | language | reponse_url | error_url | track_id | alias  | udf1 | udf2 | udf3 | udf4 | udf5 |
- | 1 | 100 | 414 | USA | https://www.example.com | https://www.example.com | 1000 | twseel | UDF1 | UDF2 | UDF3 | UDF4 | UDF5 |
+	  | action | amt | currency | language | response_url | error_url | track_id | alias  | udf1 | udf2 | udf3 | udf4 | udf5 |
+ | 1 | 100 | 414 | USA | https://www.example.com | https://www.example.com | 1000 | twseel.xml | UDF1 | UDF2 | UDF3 | UDF4 | UDF5 |
 
 
 
