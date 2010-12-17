@@ -18,3 +18,7 @@ Then /^gateway replies with transaction unique ID and gateway payment url$/ do
   @payment.page != be_empty
 end
 
+Then /^customer is directed to gateway payment for submition$/ do
+ p @payment.redirect_url != be_empty
+end
+
