@@ -1,6 +1,5 @@
 ---
-action: 1
-amt: 1
+action: 
 currency_code: 414
 lang_id: USA
 response_url: http://www.aalhamad.com
@@ -8,4 +7,4 @@ error_url: http://www.aalhamad.com
 track_id: 1
 resource_path: ./resource/
 input_file_name: resource.cgn
-alias: twseel.xml
+alias: 

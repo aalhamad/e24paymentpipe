@@ -7,7 +7,7 @@ module E24PaymentPipe
     
     SETTINGS_DEFAULT_PATH_FILE = File.dirname(__FILE__) + "/../../config/config.yaml"
     
-    def initialize(config_file = SETTINGS_DEFAULT_PATH_FILE, settings = {})
+    def initialize(settings = {}, config_file = SETTINGS_DEFAULT_PATH_FILE)
       @settings = { :action           => "", 
                     :amt              => "", 
                     :currency_code    => "",
@@ -26,13 +26,9 @@ module E24PaymentPipe
                     :udf5             => ""                                                                                
                   }
       
-      if settings.is_a?(Hash)
-        @settings.merge!(settings)
-      end
       
-      if settings.is_a?(String)
-        load_yaml(@settings, settings)
-      end                                                            
+      load_yaml(@settings, config_file)
+      @settings.merge!(values_to_string(settings))
                      
       settings_error(:action, :currency_code, :lang_id, :response_url, 
                      :error_url, :track_id, :resource_path, :input_file_name, :alias)
@@ -55,13 +51,16 @@ module E24PaymentPipe
       path = File.open(path_to_settings)
        begin
          yaml_settings = YAML.load(path)
-         str_values = {}
-         yaml_settings.each { |key, value| str_values.merge!({ key.to_sym => value.to_s }) }
-         yaml_settings.merge!(str_values)
-         settings.merge!(yaml_settings)
+         settings.merge!(values_to_string(yaml_settings))
        rescue Exception => e
          raise E24PaymentPipe::PaymentError, e
        end
+    end
+    
+    def values_to_string(hash)
+      str_values = {}
+      hash.each { |key, value| str_values.merge!({ key.to_sym => value.to_s }) }
+      str_values
     end
     
     def respond_from_securce_settings(settings)

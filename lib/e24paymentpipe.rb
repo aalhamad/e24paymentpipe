@@ -10,5 +10,4 @@ require "message"
 require "payment"
 require 'transaction'
 
-p = E24PaymentPipe::Payment.new
-p p.id
+
