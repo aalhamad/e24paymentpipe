@@ -1,0 +1,9 @@
+---
+action:  
+alias: twseel.xml
+currency_code: 414
+lang_id: USA
+response_url: http://www.aalhamad.com
+error_url: http://www.aalhamad.com
+resource_path: ./resource/
+input_file_name: resource.cgn
