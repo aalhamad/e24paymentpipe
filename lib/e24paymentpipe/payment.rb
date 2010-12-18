@@ -5,7 +5,7 @@ module E24PaymentPipe
     attr_accessor :id
     attr_accessor :page
     
-    SETTINGS_DEFAULT_PATH_FILE = File.dirname(__FILE__) + "/../../config/config.yaml"
+    SETTINGS_DEFAULT_PATH_FILE = File.dirname(__FILE__) + "/../../resource/config.yaml"
     
     def initialize(settings = {}, config_file = SETTINGS_DEFAULT_PATH_FILE)
       @settings = { :action           => "", 
@@ -30,8 +30,8 @@ module E24PaymentPipe
       load_yaml(@settings, config_file)
       @settings.merge!(values_to_string(settings))
                      
-      settings_error(:action, :currency_code, :lang_id, :response_url, 
-                     :error_url, :track_id, :resource_path, :input_file_name, :alias)
+      settings_error(:action, :currency_code, :lang_id, :response_url, :error_url, 
+                     :track_id, :resource_path, :input_file_name, :alias, :amt => "amount")
                      
       respond_from_securce_settings(@settings)
       
