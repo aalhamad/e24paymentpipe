@@ -1,6 +1,6 @@
 ---
 action:  
-alias: twseel.xml
+alias: example.xml
 currency_code: 414
 lang_id: USA
 response_url: http://www.aalhamad.com
