@@ -10,3 +10,4 @@ tmtags
 .rspec
 .document
 data
+resource/*
