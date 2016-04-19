@@ -1,3 +1,4 @@
+require "version"
 require "rubygems"
 require "bundler/setup"
 
@@ -8,6 +9,4 @@ require "parser"
 require "url"
 require "message"
 require "payment"
-require 'transaction'
-
-
+require "transaction"
