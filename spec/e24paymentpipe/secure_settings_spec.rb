@@ -32,24 +32,7 @@ describe "SecureSettings" do
       path = File.dirname(__FILE__) + "/../data/"
       p = E24PaymentPipe::SecureSettings.new(@settings.merge(:alias => "twseel.xml", :resource_path => path))
       p.output_file_name.should == path + "resource.cgz"
-      File.exists?(p.output_file_name).should be_false
-    end
-  end
-
-  context "zip file data" do
-    before(:each) do
-      @path = File.dirname(__FILE__) + "/../data/"
-    end
-    
-    it "should read a given data of security settings" do
-      data = { :id          => "89001", 
-               :password    => "89001", 
-               :web_address => "www.knetpaytest.com.kw",
-               :port        => "443",
-               :context     => "CGW302"
-               }
-      p = E24PaymentPipe::SecureSettings.new(@settings.merge(:alias => "twseel.xml", :resource_path => @path))
-      p.secure_data.should == data
+      File.exists?(p.output_file_name).should be_falsey
     end
   end
 end
