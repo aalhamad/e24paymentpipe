@@ -19,6 +19,7 @@ Gem::Specification.new do |s|
 
   s.add_dependency "rubyzip", ">= 0.9.4"
   s.add_dependency "httparty", ">= 0.6.1"
+  s.add_dependency "zip-zip"
 
   s.add_development_dependency "rake", ">= 11.1.2"
   s.add_development_dependency "rspec", ">= 2.14"

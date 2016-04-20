@@ -62,7 +62,7 @@ module E24PaymentPipe
       zip_file = Zip::ZipFile.open(output_file_name)
       
       begin
-        zip_entry = zip_file.get_entry(@alias)
+        zip_entry = zip_file.get_entry("#{@alias}.xml")
       ensure
         zip_file.close
       end
