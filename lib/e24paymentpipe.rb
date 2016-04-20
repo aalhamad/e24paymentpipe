@@ -10,3 +10,5 @@ require "url"
 require "message"
 require "payment"
 require "transaction"
+
+require "railtie" if defined?(Rails)
