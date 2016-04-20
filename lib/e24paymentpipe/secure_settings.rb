@@ -59,7 +59,7 @@ module E24PaymentPipe
       zip_entry = nil
       xml_content = []
       
-      zip_file = Zip::ZipFile.open(output_file_name)
+      zip_file = Zip::File.open(output_file_name)
       
       begin
         zip_entry = zip_file.get_entry("#{@alias}.xml")
