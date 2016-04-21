@@ -1,4 +1,4 @@
-require "zip/zip"
+require "zip"
 
 module E24PaymentPipe
   
@@ -23,9 +23,9 @@ module E24PaymentPipe
     # - <tt>:output_file_name</tt> - Set the output file name.
     
     def initialize(options = {})
-      @resource_path    = options[:resource_path] 
+      @resource_path    = options[:resource_path]
       @input_file_name  = options[:input_file_name]
-      @output_file_name = options[:output_file_name] 
+      @output_file_name = options[:output_file_name]
       @alias            = options[:alias]
       
       raise E24PaymentPipe::SecureSettingsError, "You need to set an alias" unless @alias
@@ -57,10 +57,10 @@ module E24PaymentPipe
       zip_entry = nil
       xml_content = []
       
-      zip_file = Zip::ZipFile.open(output_file_name)
+      zip_file = Zip::File.open(output_file_name)
       
       begin
-        zip_entry = zip_file.get_entry(@alias)
+        zip_entry = zip_file.get_entry("#{@alias}.xml")
       ensure
         zip_file.close
       end

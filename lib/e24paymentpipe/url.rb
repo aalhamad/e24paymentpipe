@@ -11,6 +11,7 @@ module E24PaymentPipe
       result = ""
       result << "id=#{messages[:id]}&" unless messages[:id].empty? 
       result << "password=#{messages[:password]}&" unless messages[:password].empty?
+      result << "passwordhash=#{messages[:passwordhash]}&" unless messages[:passwordhash].empty?
       result << "amt=#{messages[:amt]}&" unless messages[:amt].empty?
       result << "currencycode=#{messages[:currency_code]}&" unless messages[:currency_code].empty?
       result << "action=#{messages[:action]}&" unless messages[:action].empty?
@@ -30,6 +31,7 @@ module E24PaymentPipe
       result = ""
       result << "id=#{messages[:id]}&" unless messages[:id].empty? 
       result << "password=#{messages[:password]}&" unless messages[:password].empty?
+      result << "passwordhash=#{messages[:passwordhash]}&" unless messages[:passwordhash].empty?
       result << "amt=#{messages[:amt]}&" unless messages[:amt].empty?
       result << "currencycode=#{messages[:currency_code]}&" unless messages[:currency_code].empty?
       result << "action=#{messages[:action]}&" unless messages[:action].empty?
