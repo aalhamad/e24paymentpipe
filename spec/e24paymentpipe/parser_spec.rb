@@ -5,6 +5,7 @@ describe "Parser" do
     before(:each) do
       @secure_data = "<?xml version=\"1.0\" encoding=\"UTF-8\"?><terminal><id>89001</id>
                     <password>89001</password><webaddress>www.knetpaytest.com.kw</webaddress>
+                    <passwordhash>=89001-</passwordhash>
                     <port>443</port><context>CGW302</context></terminal>"
       @secure_data.gsub!(/\s\B/,'')
     end

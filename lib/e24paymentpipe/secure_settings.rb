@@ -23,9 +23,9 @@ module E24PaymentPipe
     # - <tt>:output_file_name</tt> - Set the output file name.
     
     def initialize(options = {})
-      # @resource_path    = options[:resource_path]
-      # @input_file_name  = options[:input_file_name]
-      # @output_file_name = options[:output_file_name]
+      @resource_path    = options[:resource_path]
+      @input_file_name  = options[:input_file_name]
+      @output_file_name = options[:output_file_name]
       @alias            = options[:alias]
       
       raise E24PaymentPipe::SecureSettingsError, "You need to set an alias" unless @alias
@@ -36,15 +36,13 @@ module E24PaymentPipe
     
     # Return the resource file input file with directory.
     def input_file_name
-      Rails.root.join("resource", "resource.cgn")
-      #@resource_path + @input_file_name
+      @resource_path + @input_file_name
     end
     
     # Return the output readable zip file from the secure setting file
     # with directory.
     def output_file_name
-      Rails.root.join("resource", "resource.zip")
-      # @resource_path + @output_file_name
+      @resource_path + @output_file_name
     end
     
     # Return the secure settings data.

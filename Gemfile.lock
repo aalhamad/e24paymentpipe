@@ -4,6 +4,7 @@ PATH
     e24paymentpipe (0.1.0)
       httparty (>= 0.6.1)
       rubyzip (>= 0.9.4)
+      zip-zip
 
 GEM
   remote: https://rubygems.org/
@@ -29,6 +30,8 @@ GEM
       rspec-support (~> 3.4.0)
     rspec-support (3.4.1)
     rubyzip (1.2.0)
+    zip-zip (0.3)
+      rubyzip (>= 1.0.0)
 
 PLATFORMS
   ruby

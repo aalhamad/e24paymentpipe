@@ -3,7 +3,7 @@ require File.expand_path(File.dirname(__FILE__) + '/../spec_helper')
 describe "Url" do
   context "creating the payment query" do
     before(:each) do
-      @messages = { :id => "89001", :password => "89001", :amt => "",
+      @messages = { :id => "89001", :passwordhash => "", :password => "89001", :amt => "",
                      :currency_code => "", :action => "", :lang_id => "",
                      :response_url => "", :error_url => "", :track_id => "",
                      :udf1 => "", :udf2 => "", :udf3 => "", :udf4 => "", :udf5 => "" }
